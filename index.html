@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TODO's list</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+<body>
+    <div id="wrapper">
+
+        <header>
+            <div class="insert">
+                <form action="#" method="get">
+                    <input type="text" id="tituloTarea" placeholder="Introduce la tarea">
+
+                    <select id="prioridad" required>
+						<option value="">Selecciona una prioridad</option>
+						<option value="urgente">Urgente</option>
+						<option value="diaria">Diaria</option>
+						<option value="mensual">Mensual</option>
+					</select>
+
+                    <input type="submit" value="Guardar" id="guardar">
+                </form>
+                <p id="mensaje"></p>
+            </div>
+            <div class="filter">
+                <select id="prioridadSelect">
+					<option value="">Todas las tareas</option>
+					<option value="urgente">Urgente</option>
+					<option value="diaria">Diaria</option>
+					<option value="mensual">Mensual</option>
+				</select>
+
+                <input type="text" placerholder="Tarea a buscar" id="search">
+            </div>
+        </header>
+        <!-- /header -->
+
+        <main>
+            <section class="notareas" id="notareas">
+
+            </section>
+
+
+
+
+
+            <section class="tareas" id="tareas">
+
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>APP TODO's Proyecto Final</p>
+        </footer>
+
+
+    </div>
+
+    <script src="js/agenda.js"></script>
+
+    <script>
+        pintarTareas(listaTareas);
+    </script>
+</body>
+
+</html>
