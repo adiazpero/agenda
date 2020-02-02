@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <title>TODO's list</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Handlee|Indie+Flower|Kalam|Merienda|Patrick+Hand&display=swap" rel="stylesheet">
 </head>
 
 
@@ -12,22 +14,15 @@
     <div id="wrapper">
 
         <header>
-            <div class="insert">
-                <form action="#" method="get">
-                    <input type="text" id="tituloTarea" placeholder="Introduce la tarea">
-
-                    <select id="prioridad" required>
-						<option value="">Selecciona una prioridad</option>
-						<option value="urgente">Urgente</option>
-						<option value="diaria">Diaria</option>
-						<option value="mensual">Mensual</option>
-					</select>
-
-                    <input type="submit" value="Guardar" id="guardar">
-                </form>
-                <p id="mensaje"></p>
+            <div>
+                <h1>AGENDA 2020</h1>
             </div>
+
+
+
+
             <div class="filter">
+                <div class="buscador">Buscador</div>
                 <select id="prioridadSelect">
 					<option value="">Todas las tareas</option>
 					<option value="urgente">Urgente</option>
@@ -57,7 +52,23 @@
         </main>
 
         <footer>
-            <p>APP TODO's Proyecto Final</p>
+            <div class="insert">
+                <div class="anadir">Añadir Tarea</div>
+                <form action="#" method="get">
+                    <input type="text" id="tituloTarea" placeholder="Introduce la tarea">
+
+                    <select id="prioridad" required>
+						<option value="">Selecciona una prioridad</option>
+						<option value="urgente">Urgente</option>
+						<option value="diaria">Diaria</option>
+						<option value="mensual">Mensual</option>
+					</select>
+
+                    <input type="submit" value="Guardar" id="guardar">
+                </form>
+                <p id="mensaje"></p>
+            </div>
+
         </footer>
 
 

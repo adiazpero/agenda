@@ -51,8 +51,8 @@ listaTareas = [{
 function pintarTareas(listaTarea) {
     for (i = 0; i < listaTarea.length; i++) {
         document.getElementById('tareas').innerHTML += `<article id="${listaTarea[i].idTarea}" class="${listaTarea[i].prioridad}">
-        <h2>${listaTarea[i].titulo}</h2>
-        <a href="#" onclick="eliminarTarea(${listaTarea[i].idTarea})" title="eliminar">Eliminar</a>
+        <h2><i class="fas fa-pencil-alt"></i> ${listaTarea[i].titulo}</h2>
+        <a href="#" onclick="eliminarTarea(${listaTarea[i].idTarea})" title="eliminar">Eliminar <i class="far fa-trash-alt"></i></a>
         </article>`;
     }
 }
@@ -108,20 +108,26 @@ function agregarTarea() {
     let titulo = document.getElementById('tituloTarea').value;
     let prioridad = document.getElementById('prioridad').value;
 
-    var tarea = {
-        'idTarea': idTarea,
-        'titulo': titulo,
-        'prioridad': prioridad
+    if (prioridad == '') {
+        alert('Debes seleccionar una prioridad para crear la tarea')
+    } else {
+        var tarea = {
+            'idTarea': idTarea,
+            'titulo': titulo,
+            'prioridad': prioridad
 
-    };
-    listaTareas.push(tarea);
+        };
+        listaTareas.push(tarea);
 
-    limpiarPantalla();
-    pintarTareas(listaTareas);
+        limpiarPantalla();
+        pintarTareas(listaTareas);
+
+        document.getElementById("prioridadSelect").value = '';
+
+    }
 }
 
 botonGuardar.addEventListener('click', agregarTarea);
-
 
 
 
@@ -131,45 +137,12 @@ var busqueda = document.querySelector('#search');
 busqueda.addEventListener('keyup', buscarTarea);
 
 function buscarTarea(e) {
-    var buscarPalabra = e.target.value;
-    var listaBusqueda = listaTareas.filter(tarea => tarea.titulo.toLowerCase().includes(buscarPalabra.toLowerCase()));
+    var key = e.keyCode;
+    if (key == 13) {
+        var buscarPalabra = e.target.value;
+        var listaBusqueda = listaTareas.filter(tarea => tarea.titulo.toLowerCase().includes(buscarPalabra.toLowerCase()));
 
-    limpiarPantalla();
-    pintarTareas(listaBusqueda);
+        limpiarPantalla();
+        pintarTareas(listaBusqueda);
+    }
 }
-
-
-
-
-
-
-function capturarIntro() {
-
-}
-
-
-
-/*
-var botones = document.querySelectorAll('#menu li a');
-
-for (boton of botones) {
-    boton.addEventListener('click', capturarBoton);
-}
-
-function capturarBoton(event) {
-    event.preventDefault();
-
-    let seccion = event.target.innerText.toLowerCase();
-
-    var secciones = document.querySelectorAll('.contenedor section');
-    //primero pongo todas a none
-
-    secciones.forEach(elemento => elemento.style.display = "none");
-
-    //la que toco a block
-    document.getElementById(seccion).style.display = "block";
-
-
-}
-
-*/
