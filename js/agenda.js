@@ -19,32 +19,28 @@ listaTareas = [{
     {
         'idTarea': 2,
         'titulo': 'Salir a comer',
-        'prioridad': 'mensual'
+        'prioridad': 'diaria'
 
     },
     {
         'idTarea': 3,
-        'titulo': 'vamonos',
+        'titulo': 'Ir al teatro',
         'prioridad': 'mensual'
 
     },
     {
         'idTarea': 4,
-        'titulo': 'vamonos',
+        'titulo': 'Cita medica',
         'prioridad': 'mensual'
 
     }, {
         'idTarea': 5,
-        'titulo': 'vamonos',
+        'titulo': 'Clase pilates',
         'prioridad': 'mensual'
 
     }
 ];
 
-/*<article id="1" class="diaria">
-<h2>Titulo de la tarea 1 - Esta tarea es DUMMY</h2>
-<a href="#" title="eliminar">Eliminar</a>
-</article>*/
 
 
 
@@ -59,8 +55,6 @@ function pintarTareas(listaTarea) {
 
 
 
-
-//pId = ${listaTareas[i].idTarea}
 function eliminarTarea(pId) {
     for (i = 0; i < listaTareas.length; i++) {
         if (listaTareas[i].idTarea == pId) {
@@ -92,7 +86,7 @@ function filtrarTareas() {
             contador++;
         }
     }
-    console.log(listaTareasFiltrada);
+
     limpiarPantalla();
     pintarTareas(listaTareasFiltrada);
 }
