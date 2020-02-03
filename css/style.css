@@ -1,22 +1,18 @@
 @import url(reset.css);
 * {
     box-sizing: border-box;
-    font-family: 'Kalam', cursive;
+    font-family: 'Schoolbell', cursive;
 }
 
 body {
-    font-family: 'Kalam', cursive;
+    font-family: 'Schoolbell', cursive;
     font-size: 1em;
-    background-color: rgba(189, 216, 233, 0.959);
+    background-color: rgb(212, 222, 243);
 }
 
 #wrapper {
     max-width: 45em;
     margin: 0 auto;
-}
-
-header h1 {
-    color: white;
 }
 
 header .filter .buscador {
@@ -52,21 +48,21 @@ main .tareas h2 {
 }
 
 main .tareas .urgente {
-    background-color: rgb(228, 195, 105);
+    background-color: rgb(230, 186, 66);
 }
 
 main .tareas .diaria {
-    background-color: rgb(143, 175, 211);
+    background-color: rgb(143, 179, 221);
 }
 
 main .tareas .mensual {
-    background-color: rgb(209, 146, 181);
+    background-color: rgb(214, 124, 174);
 }
 
 main .tareas article>a {
-    background-color: rgb(226, 89, 64);
+    background-color: rgb(228, 76, 49);
     display: inline-block;
-    padding: 16px;
+    padding: 18px;
     color: white;
     text-decoration: none;
     width: 130px;

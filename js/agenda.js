@@ -1,5 +1,4 @@
 var listaTareas = new Array();
-//var tarea = document.querySelectorAll('tareas');
 var prioridad = document.querySelector('#prioridadSelect');
 var botonGuardar = document.querySelector('#guardar');
 
@@ -12,7 +11,7 @@ listaTareas = [{
     },
     {
         'idTarea': 1,
-        'titulo': 'Dormir',
+        'titulo': 'Hacer deporte',
         'prioridad': 'diaria'
 
     },
@@ -30,16 +29,17 @@ listaTareas = [{
     },
     {
         'idTarea': 4,
-        'titulo': 'Cita medica',
-        'prioridad': 'mensual'
+        'titulo': 'Hacer la compra',
+        'prioridad': 'urgente'
 
     }, {
         'idTarea': 5,
-        'titulo': 'Clase pilates',
+        'titulo': 'Cita medico',
         'prioridad': 'mensual'
 
     }
 ];
+
 
 
 
@@ -52,6 +52,8 @@ function pintarTareas(listaTarea) {
         </article>`;
     }
 }
+
+
 
 
 
