@@ -1,12 +1,13 @@
 @import url(reset.css);
 * {
     box-sizing: border-box;
-    font-family: 'Merienda', cursive;
+    font-family: 'Schoolbell', cursive;
 }
 
 body {
-    font-family: 'Merienda', cursive;
+    font-family: 'Schoolbell', cursive;
     font-size: 1em;
+    background-color: rgb(212, 222, 243);
 }
 
 #wrapper {
@@ -61,7 +62,7 @@ main .tareas .mensual {
 main .tareas article>a {
     background-color: rgb(228, 76, 49);
     display: inline-block;
-    padding: 17px;
+    padding: 18px;
     color: white;
     text-decoration: none;
     width: 130px;
